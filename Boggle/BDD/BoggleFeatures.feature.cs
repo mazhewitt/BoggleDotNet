@@ -136,7 +136,7 @@ this.FeatureBackground();
 #line 27
  testRunner.Given("a boggle grid that looks like:", "[a,b,c,d,\r\n e,f,g,h,\r\n i,h,k,l,\r\n m,n,o,p]", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 34
- testRunner.When("a user enters the word \"cafe\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("a user enters the word \"hop\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 35
  testRunner.Then("they score 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -159,34 +159,36 @@ this.FeatureBackground();
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Word"});
             table2.AddRow(new string[] {
-                        "herd"});
+                        "the"});
             table2.AddRow(new string[] {
-                        "heed"});
+                        "lex"});
             table2.AddRow(new string[] {
-                        "bleed"});
+                        "bred"});
             table2.AddRow(new string[] {
-                        "led"});
+                        "red"});
             table2.AddRow(new string[] {
-                        "deed"});
+                        "herb"});
             table2.AddRow(new string[] {
-                        "bee"});
+                        "her"});
             table2.AddRow(new string[] {
-                        "reed"});
+                        "cert"});
 #line 45
  testRunner.When("a user enters the words:", ((string)(null)), table2, "When ");
 #line 54
- testRunner.Then("they score 16", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("they score 7", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User enters a mixture of correct and incorrect words and is only given a score fo" +
-            "r the correct words")]
-        public virtual void UserEntersAMixtureOfCorrectAndIncorrectWordsAndIsOnlyGivenAScoreForTheCorrectWords()
+            "r the correct words, letters have to be in the valid words list and be adjacent " +
+            "in the grid")]
+        public virtual void UserEntersAMixtureOfCorrectAndIncorrectWordsAndIsOnlyGivenAScoreForTheCorrectWordsLettersHaveToBeInTheValidWordsListAndBeAdjacentInTheGrid()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User enters a mixture of correct and incorrect words and is only given a score fo" +
-                    "r the correct words", ((string[])(null)));
+                    "r the correct words, letters have to be in the valid words list and be adjacent " +
+                    "in the grid", ((string[])(null)));
 #line 56
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -196,31 +198,45 @@ this.FeatureBackground();
  testRunner.Given("a boggle grid that looks like:", "[i,i,d,i,\r\n k,r,e,a,\r\n m,o,e,e,\r\n d,p,l,u]", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Word"});
+                        "Word",
+                        "Score"});
             table3.AddRow(new string[] {
-                        "mole"});
+                        "aid",
+                        "1"});
             table3.AddRow(new string[] {
-                        "read"});
+                        "aide",
+                        "1"});
             table3.AddRow(new string[] {
-                        "red"});
+                        "red",
+                        "1"});
             table3.AddRow(new string[] {
-                        "kreed"});
+                        "kreep",
+                        "0"});
             table3.AddRow(new string[] {
-                        "pole"});
+                        "pole",
+                        "1"});
             table3.AddRow(new string[] {
-                        "pule"});
+                        "leered",
+                        "3"});
             table3.AddRow(new string[] {
-                        "dope"});
+                        "dop",
+                        "1"});
             table3.AddRow(new string[] {
-                        "dreaped"});
+                        "dreaped",
+                        "0"});
             table3.AddRow(new string[] {
-                        "leaped"});
+                        "leadier",
+                        "5"});
             table3.AddRow(new string[] {
-                        "reaped"});
+                        "idea",
+                        "1"});
+            table3.AddRow(new string[] {
+                        "idiom",
+                        "0"});
 #line 64
  testRunner.When("a user enters the words:", ((string)(null)), table3, "When ");
-#line 76
- testRunner.Then("they score 19", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 77
+ testRunner.Then("they score 14", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -232,28 +248,28 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User gets a board with the letter Q, which is represented by Qu in Boggle, enters" +
                     " correct words and gets a score", ((string[])(null)));
-#line 78
+#line 79
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
-#line 79
+#line 80
  testRunner.Given("a boggle grid that looks like:", "[y,b,u,w,\r\n u,e,i,Qu,\r\n a,r,v,y,\r\n x,m,e,r]", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Word"});
             table4.AddRow(new string[] {
-                        "queue"});
+                        "quire"});
             table4.AddRow(new string[] {
-                        "arrive"});
+                        "quivery"});
             table4.AddRow(new string[] {
-                        "mire"});
+                        "mare"});
             table4.AddRow(new string[] {
-                        "qua"});
-#line 86
+                        "yea"});
+#line 87
  testRunner.When("a user enters the words:", ((string)(null)), table4, "When ");
-#line 92
- testRunner.Then("they score 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 93
+ testRunner.Then("they score 9", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
